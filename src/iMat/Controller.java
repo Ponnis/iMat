@@ -11,12 +11,12 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable, ShoppingCartListener {
 
-    private Model model;
+    private Model model = Model.getInstance();
 
     // Account pane actions
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        updateProductList();
+        // TODO
     }
 
     // Shope pane methods
@@ -25,10 +25,6 @@ public class Controller implements Initializable, ShoppingCartListener {
         // TODO
     }
 
-    private void updateProductList() {
-        List<Product> products = model.getProducts();
 
-        // TODO
-    }
 
 }

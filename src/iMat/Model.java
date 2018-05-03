@@ -33,7 +33,7 @@ public class Model {
     public static Model getInstance() {
         if (instance == null) {
             instance = new Model();
-            instance.init();
+            //instance.init();
         }
         return instance;
     }
@@ -45,6 +45,7 @@ public class Model {
     }
 
     public List<Product> getProducts(){
+
         return iMatDataHandler.getProducts();
     }
 
