@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import se.chalmers.cse.dat216.project.Product;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class ItemThumbnail {
@@ -46,7 +47,8 @@ public class ItemThumbnail {
         // Specifika
         this.product = product;
         this.parentController = parentController;
-        // TODO this.thumbnailImageView.setImage(getSquareImage(product.getImageName()));
+        // TODO does the row below work?
+        // this.thumbnailImageView.setImage(getSquareImage(new Image("src/UI/Images/ " + product.getImageName())));
         this.nameThumbnailLabel.setText(product.getName());
         this.priceThumbnailLabel.setText(Double.toString(product.getPrice()));
 
