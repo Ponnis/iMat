@@ -1,17 +1,24 @@
 package iMat;
 
+import com.sun.javafx.geom.BaseBounds;
+import com.sun.javafx.geom.transform.BaseTransform;
+import com.sun.javafx.jmx.MXNodeAlgorithm;
+import com.sun.javafx.jmx.MXNodeAlgorithmContext;
+import com.sun.javafx.sg.prism.NGNode;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import javax.swing.*;
 import java.io.IOException;
 
-public class ItemThumbnail {
+public class ItemThumbnail extends AnchorPane {
 
     private Controller parentController;
     private Product product;
@@ -33,7 +40,7 @@ public class ItemThumbnail {
     @FXML
     private Label nameThumbnailLabel;
 
-    public ItemThumbnail(Product product, Controller controller){
+    public ItemThumbnail(Product product, Controller controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("item_thumbnail.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -48,7 +55,7 @@ public class ItemThumbnail {
         this.product = product;
         this.parentController = parentController;
         // TODO does the row below work?
-        // this.thumbnailImageView.setImage(getSquareImage(new Image("src/UI/Images/ " + product.getImageName())));
+        this.thumbnailImageView.setImage(getSquareImage(new Image("resources/imat/imat/images/" + product.getImageName())));
         this.nameThumbnailLabel.setText(product.getName());
         this.priceThumbnailLabel.setText(Double.toString(product.getPrice()));
 
@@ -61,32 +68,29 @@ public class ItemThumbnail {
 
     }
 
-    public Image getSquareImage(Image image){
+    public Image getSquareImage(Image image) {
 
         int x = 0;
         int y = 0;
         int width = 0;
         int height = 0;
 
-        if(image.getWidth() > image.getHeight()){
+        if (image.getWidth() > image.getHeight()) {
             width = (int) image.getHeight();
             height = (int) image.getHeight();
-            x = (int)(image.getWidth() - width)/2;
+            x = (int) (image.getWidth() - width) / 2;
             y = 0;
-        }
-
-        else if(image.getHeight() > image.getWidth()){
+        } else if (image.getHeight() > image.getWidth()) {
             width = (int) image.getWidth();
             height = (int) image.getWidth();
             x = 0;
-            y = (int) (image.getHeight() - height)/2;
-        }
-
-        else{
+            y = (int) (image.getHeight() - height) / 2;
+        } else {
             //Width equals Height, return original image
             return image;
         }
         return new WritableImage(image.getPixelReader(), x, y, width, height);
     }
+
 
 }

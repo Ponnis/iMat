@@ -3,6 +3,7 @@ package iMat;
 import javafx.fxml.FXML;
 
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.Product;
 
@@ -17,7 +18,7 @@ public class StartPage {
     private Map<String, ItemThumbnail> productListItemMap = new HashMap<String, ItemThumbnail>();
 
     @FXML
-    private GridPane gridPane;
+    private FlowPane flowPane;
     @FXML
     private ImageView menuButton;
     @FXML
@@ -38,12 +39,13 @@ public class StartPage {
     }
 
     public void updateProductList(){
-        gridPane.getChildren().clear();
+        fillMap();
+        flowPane.getChildren().clear();
         List<Product> products = model.getProducts();
 
         for(int i = 0; i < products.size(); i++){
             // TODO fixa raden nedan
-            // gridPane.getChildren().add(productListItemMap.get(products.get(i).getName()));
+            flowPane.getChildren().add(productListItemMap.get(products.get(i).getName()));
         }
     }
 
