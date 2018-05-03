@@ -26,7 +26,7 @@ public class StartPage {
 
 
 
-    private void fillMap() {
+    void fillMap() {
         List<Product> productList = model.getProducts();
 
         for (int i = 0; i < productList.size(); i++){
@@ -39,7 +39,6 @@ public class StartPage {
     }
 
     public void updateProductList(){
-        fillMap();
         flowPane.getChildren().clear();
         List<Product> products = model.getProducts();
 

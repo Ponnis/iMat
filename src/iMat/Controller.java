@@ -12,17 +12,24 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable, ShoppingCartListener {
 
     private Model model = Model.getInstance();
+    StartPage startPage;
 
     // Account pane actions
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
+        startPage.fillMap();
     }
 
     // Shope pane methods
     @Override
     public void shoppingCartChanged(CartEvent evt) {
         // TODO
+    }
+
+    private void updateProducts(){
+        startPage.updateProductList();
     }
 
 
