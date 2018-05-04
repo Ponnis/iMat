@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -140,29 +141,48 @@
         </AnchorPane>
     </right>
    <top>
-      <AnchorPane prefHeight="49.0" prefWidth="814.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="54.0" prefWidth="814.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="brandImageView" fitHeight="52.0" fitWidth="111.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <ImageView fx:id="brandImageView" fitHeight="52.0" fitWidth="111.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="7.0">
                <image>
                   <Image url="@../../resources/images/iMatLogga.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <ImageView fitHeight="46.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                <image>
                   <Image url="@../../resources/images/CategoryDormantButton.png" />
                </image>
             </ImageView>
-            <Label layoutX="696.0" layoutY="11.0" stylesheets="@iMat.css" text="Logga in" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="11.0">
+            <Label layoutX="661.0" layoutY="13.0" stylesheets="@iMat.css" text="Mina uppgifter" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="13.0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="142.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="137.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/images/listIcon.png" />
+                  <Image url="@../../resources/images/Favoriter.png" />
                </image>
             </ImageView>
-            <Label layoutX="137.0" layoutY="29.0" text="Historik" />
+            <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="282.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/listor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="187.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/Historik.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="234.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/Kundtjänst.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="129.0" layoutY="34.0" text="Favoriter" />
+            <Label layoutX="182.0" layoutY="34.0" text="Historik" />
+            <Label layoutX="235.0" layoutY="34.0" text="Hjälp" />
+            <Label layoutX="282.0" layoutY="34.0" text="Listor" />
+            <TextArea layoutX="318.0" layoutY="6.0" prefHeight="43.0" prefWidth="307.0" />
          </children>
       </AnchorPane>
    </top>
